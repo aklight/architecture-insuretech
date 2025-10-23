@@ -1,0 +1,8 @@
+# Получить только базовую информацию о клиенте
+query GetClientBasic($id: ID!) {
+  client(id: $id) {
+    id
+    name
+    age
+  }
+}
