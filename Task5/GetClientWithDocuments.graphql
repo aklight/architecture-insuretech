@@ -1,0 +1,12 @@
+# Получить информацию о клиенте только с документами
+query GetClientWithDocuments($id: ID!) {
+  client(id: $id) {
+    id
+    name
+    documents {
+      id
+      type
+      number
+    }
+  }
+}

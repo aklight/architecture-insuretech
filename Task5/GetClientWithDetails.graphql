@@ -1,0 +1,21 @@
+# Получить информацию о клиенте с документами и родственниками
+query GetClientWithDetails($id: ID!) {
+  client(id: $id) {
+    id
+    name
+    age
+    documents {
+      id
+      type
+      number
+      issueDate
+      expiryDate
+    }
+    relatives {
+      id
+      relationType
+      name
+      age
+    }
+  }
+}
